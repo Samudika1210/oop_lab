@@ -35,4 +35,14 @@ public abstract class StaffMember {
         System.out.println("Department: " + department);
     }
     public abstract double calculateMonthlyPayment();
+    
+    public void changeDepartment(String newDepartment) {
+        if (newDepartment != null && !newDepartment.isEmpty()) {
+            this.department = newDepartment;
+        }
+    }
+    
+    public final void showCommonNotice() {
+        System.out.println("Notice: All staff members must submit their monthly reports by the 25th.");
+    }
 }

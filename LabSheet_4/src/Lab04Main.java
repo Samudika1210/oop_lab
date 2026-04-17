@@ -29,6 +29,15 @@ public class Lab04Main {
         System.out.println("\n--- Bonus Estimation ---");
         System.out.println(lec1.getFullName() + " Bonus: " + UniversityPolicy.calculateBonus(lecSalary));
         System.out.println(lab.getFullName() + " Bonus: " + UniversityPolicy.calculateBonus(labSalary));
+    
+        System.out.println("Total Created Staff Objects: " + StaffMember.staffCount);
+
+        System.out.println("\n--- Common Notices ---");
+        lec1.showCommonNotice();
+        lec2.showCommonNotice();
+        lab.showCommonNotice();
+    
+    
     }
     
     
