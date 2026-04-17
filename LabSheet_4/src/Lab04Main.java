@@ -3,21 +3,31 @@ public class Lab04Main {
         
         UniversityPolicy.showPolicyHeader();
         System.out.println("University: " + UniversityPolicy.UNIVERSITY_NAME);
+        
+        StaffMember.showSystemName();
       
-        Lecturer lec = new Lecturer("Dr. Sunimal", "L100", "Computing", 75000, 12);
+        Lecturer lec1 = new Lecturer("Dr. Sunimal", "L100", "Computing", 75000, 12);
+        Lecturer lec2 = new Lecturer("Ms. Nimal Silva", "L300", "Business", 55000, 5);
         LabAssistant lab = new LabAssistant("Mr. Perera", "A200", "IT", 45000, 10);
         
-        double lecSalary = lec.calculateMonthlyPayment();
+        System.out.println("\n--- Displaying All Staff Details ---");
+        lec1.displayStaffDetails();
+        lec2.displayStaffDetails();
+        lab.displayLabAssistantDetails();
+        
+        System.out.println("\n");
+        
+        double lecSalary = lec1.calculateMonthlyPayment();
         double labSalary = lab.calculateMonthlyPayment();
         
         System.out.println("--- Lecturer Details ---");
-        lec.displayStaffDetails();
+        lec1.displayStaffDetails();
 
         System.out.println("\n--- Lab Assistant Details ---");
         lab.displayLabAssistantDetails();
         
         System.out.println("\n--- Bonus Estimation ---");
-        System.out.println(lec.getFullName() + " Bonus: " + UniversityPolicy.calculateBonus(lecSalary));
+        System.out.println(lec1.getFullName() + " Bonus: " + UniversityPolicy.calculateBonus(lecSalary));
         System.out.println(lab.getFullName() + " Bonus: " + UniversityPolicy.calculateBonus(labSalary));
     }
     
