@@ -13,4 +13,10 @@ public class LabAssistant  extends StaffMember {
     public double calculateMonthlyPayment() {
         return basicSalary + (overtimeHours * overtimeRate);
     }
+    
+    public void displayStaffDetails() {
+        displayBasicDetails();
+        System.out.println("Basic Salary: " + basicSalary);
+        System.out.println("Monthly Payment: " + calculateMonthlyPayment());
+    }
 }

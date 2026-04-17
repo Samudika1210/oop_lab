@@ -14,4 +14,10 @@ public class Lecturer extends StaffMember {
         return basicSalary + (extraHours * hourlyRate);
     }
     
+    public void displayStaffDetails() {
+        displayBasicDetails();
+        System.out.println("Basic Salary: " + basicSalary);
+        System.out.println("Monthly Payment: " + calculateMonthlyPayment());
+    }
+    
 }

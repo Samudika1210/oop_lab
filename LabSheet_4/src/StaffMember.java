@@ -3,10 +3,14 @@ public abstract class StaffMember {
     private final String staffId;
     protected String department;
     
+    public static int staffCount = 0;
+    
     public StaffMember(String fullName, String staffId, String department) {
         this.fullName = fullName;
         this.staffId = staffId;
         this.department = department;
+        
+        staffCount++;
     }
     
     public String getFullName() {
