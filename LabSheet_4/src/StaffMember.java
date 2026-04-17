@@ -3,6 +3,7 @@ public abstract class StaffMember {
     private final String staffId;
     protected String department;
     
+    private static String systemName = "Campus Staff Management System";
     public static int staffCount = 0;
     
     public StaffMember(String fullName, String staffId, String department) {
@@ -11,6 +12,9 @@ public abstract class StaffMember {
         this.department = department;
         
         staffCount++;
+    }
+        public static void showSystemName() {
+        System.out.println("System Name: " + systemName);
     }
     
     public String getFullName() {
